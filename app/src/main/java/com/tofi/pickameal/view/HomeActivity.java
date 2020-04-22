@@ -5,8 +5,6 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.tofi.pickameal.R;
 import com.tofi.pickameal.model.Meal;

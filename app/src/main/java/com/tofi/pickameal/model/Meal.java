@@ -1,5 +1,7 @@
 package com.tofi.pickameal.model;
 
+import java.util.ArrayList;
+
 public class Meal {
     // Meal Season Categorization
     public static final String SUMMER_MEAL = "summer meal";
@@ -10,68 +12,133 @@ public class Meal {
     public static final String LUNCH = "lunch";
     public static final String DINNER = "dinner";
     public static final String SNACKS = "snacks";
-    public static final String ENTRIES = "entries";
     public static final String SOHOR = "sohor";
     public static final String RAMADAN_BREAKFAST = "ramadan breakfast";
     public static final String DESSERTS = "desserts";
-    public static final String DRINKS = "drinks";
     //User Preferences
     public static final String VEGAN = "vegan";
+    public static final String DIET = "diet";
     public static final String CHRISTIAN_MEAL = "christian meal";
     public static final String DEFAULT_PREFERENCES = "default preferences";
 
-    private String mMealName;
-    private int mImageResourceId;
-    private int mMealCalories;
     private String mMealSeason;
     private String mMealType;
     private String mUserPreferences;
 
-    public String getMealName() {
-        return mMealName;
+    private Dish mEntry;
+    private boolean hasEntry;
+    private Dish mMainDish;
+    private boolean hasMain;
+    private Dish mSideDish;
+    private boolean hasSide;
+    private Dish mDessert;
+    private boolean hasDessert;
+    private Dish mDrinks;
+    private boolean hasDrinks;
+
+    public Meal(Dish mEntry, Dish mMainDish, Dish mSideDish, Dish mDessert, Dish mDrinks) {
+        this.mEntry = mEntry;
+        this.hasEntry = true;
+        this.mMainDish = mMainDish;
+        this.hasMain = true;
+        this.mSideDish = mSideDish;
+        this.hasSide = true;
+        this.mDessert = mDessert;
+        this.hasDessert = true;
+        this.mDrinks = mDrinks;
+        this.hasDrinks = true;
     }
 
-    public void setMealName(String mealName) {
-        this.mMealName = mealName;
+    public Meal(Dish mEntry, Dish mMainDish, Dish mSideDish, Dish mDrinks) {
+        this.mEntry = mEntry;
+        this.hasEntry = true;
+        this.mMainDish = mMainDish;
+        this.hasMain = true;
+        this.mSideDish = mSideDish;
+        this.hasSide = true;
+        this.mDrinks = mDrinks;
+        this.hasDrinks = true;
+        this.hasDessert = false;
     }
 
-    public int getImageResourceId() {
-        return mImageResourceId;
+
+    public Dish getmEntry() {
+        return mEntry;
     }
 
-    public void setImageResourceId(int imageResourceId) {
-        this.mImageResourceId = imageResourceId;
+    public void setmEntry(Dish mEntry) {
+        this.mEntry = mEntry;
     }
 
-    public int getMealCalories() {
-        return mMealCalories;
+    public boolean isHasEntry() {
+        return hasEntry;
     }
 
-    public void setMealCalories(int mealCalories) {
-        this.mMealCalories = mealCalories;
+    public void setHasEntry(boolean hasEntry) {
+        this.hasEntry = hasEntry;
     }
 
-    public String getMealSeason() {
-        return mMealSeason;
+    public Dish getmMainDish() {
+        return mMainDish;
     }
 
-    public void setMealSeason(String mealSeason) {
-        this.mMealSeason = mealSeason;
+    public void setmMainDish(Dish mMainDish) {
+        this.mMainDish = mMainDish;
     }
 
-    public String getMealType() {
-        return mMealType;
+    public boolean isHasMain() {
+        return hasMain;
     }
 
-    public void setMealType(String mealType) {
-        this.mMealType = mealType;
+    public void setHasMain(boolean hasMain) {
+        this.hasMain = hasMain;
     }
 
-    public String getUserPreferences() {
-        return mUserPreferences;
+    public Dish getmSideDish() {
+        return mSideDish;
     }
 
-    public void setUserPreferences(String userPreferences) {
-        this.mUserPreferences = userPreferences;
+    public void setmSideDish(Dish mSideDish) {
+        this.mSideDish = mSideDish;
+    }
+
+    public boolean isHasSide() {
+        return hasSide;
+    }
+
+    public void setHasSide(boolean hasSide) {
+        this.hasSide = hasSide;
+    }
+
+    public Dish getmDessert() {
+        return mDessert;
+    }
+
+    public void setmDessert(Dish mDessert) {
+        this.mDessert = mDessert;
+    }
+
+    public boolean isHasDessert() {
+        return hasDessert;
+    }
+
+    public void setHasDessert(boolean hasDessert) {
+        this.hasDessert = hasDessert;
+    }
+
+    public Dish getmDrinks() {
+        return mDrinks;
+    }
+
+    public void setmDrinks(Dish mDrinks) {
+        this.mDrinks = mDrinks;
+    }
+
+    public boolean isHasDrinks() {
+        return hasDrinks;
+    }
+
+    public void setHasDrinks(boolean hasDrinks) {
+        this.hasDrinks = hasDrinks;
     }
 }

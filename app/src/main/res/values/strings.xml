@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Pick A Meal</string>
+    <string name="main_dish_description" translatable="false">This is the meal main dish</string>
+    <string name="entry_description" translatable="false">this is the meal entry dish</string>
+    <string name="side_dish_description" translatable="false">this is the meal side dish</string>
+    <string name="dessert_description" translatable="false">this is the dessert</string>
+    <string name="drinks_description" translatable="false">this is the meal drink</string>
+    <string name="main_dish_text">Main Dish: </string>
+    <string name="side_dish_text">Side_dish: </string>
+    <string name="entry_text">Entry: </string>
+    <string name="dessert_text">Dessert: </string>
+    <string name="drink_text">Drink: </string>
 </resources>

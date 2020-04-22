@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">نأكل أيه</string>
+    <string name="main_dish_text">الطبق الرئيسى</string>
+    <string name="side_dish_text">الطبق الجانبى</string>
+    <string name="entry_text">المقبلات</string>
+    <string name="dessert_text">الحلو</string>
+    <string name="drink_text">المشروب</string>
 </resources>
