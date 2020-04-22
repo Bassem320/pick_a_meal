@@ -3,27 +3,6 @@ package com.tofi.pickameal.model;
 import java.util.ArrayList;
 
 public class Meal {
-    // Meal Season Categorization
-    public static final String SUMMER_MEAL = "summer meal";
-    public static final String WINTER_MEAL = "winter meal";
-    public static final String ALL_YEAR_MEAL = "all year meal";
-    //Meal Type Categorization
-    public static final String BREAKFAST = "breakfast";
-    public static final String LUNCH = "lunch";
-    public static final String DINNER = "dinner";
-    public static final String SNACKS = "snacks";
-    public static final String SOHOR = "sohor";
-    public static final String RAMADAN_BREAKFAST = "ramadan breakfast";
-    public static final String DESSERTS = "desserts";
-    //User Preferences
-    public static final String VEGAN = "vegan";
-    public static final String DIET = "diet";
-    public static final String CHRISTIAN_MEAL = "christian meal";
-    public static final String DEFAULT_PREFERENCES = "default preferences";
-
-    private String mMealSeason;
-    private String mMealType;
-    private String mUserPreferences;
 
     private Dish mEntry;
     private boolean hasEntry;
@@ -62,11 +41,11 @@ public class Meal {
     }
 
 
-    public Dish getmEntry() {
+    public Dish getEntry() {
         return mEntry;
     }
 
-    public void setmEntry(Dish mEntry) {
+    public void setEntry(Dish mEntry) {
         this.mEntry = mEntry;
     }
 
@@ -78,11 +57,11 @@ public class Meal {
         this.hasEntry = hasEntry;
     }
 
-    public Dish getmMainDish() {
+    public Dish getMainDish() {
         return mMainDish;
     }
 
-    public void setmMainDish(Dish mMainDish) {
+    public void setMainDish(Dish mMainDish) {
         this.mMainDish = mMainDish;
     }
 
@@ -94,11 +73,11 @@ public class Meal {
         this.hasMain = hasMain;
     }
 
-    public Dish getmSideDish() {
+    public Dish getSideDish() {
         return mSideDish;
     }
 
-    public void setmSideDish(Dish mSideDish) {
+    public void setSideDish(Dish mSideDish) {
         this.mSideDish = mSideDish;
     }
 
@@ -110,11 +89,11 @@ public class Meal {
         this.hasSide = hasSide;
     }
 
-    public Dish getmDessert() {
+    public Dish getDessert() {
         return mDessert;
     }
 
-    public void setmDessert(Dish mDessert) {
+    public void setDessert(Dish mDessert) {
         this.mDessert = mDessert;
     }
 
@@ -126,11 +105,11 @@ public class Meal {
         this.hasDessert = hasDessert;
     }
 
-    public Dish getmDrinks() {
+    public Dish getDrinks() {
         return mDrinks;
     }
 
-    public void setmDrinks(Dish mDrinks) {
+    public void setDrinks(Dish mDrinks) {
         this.mDrinks = mDrinks;
     }
 
