@@ -12,30 +12,30 @@
     <string name="drink_text">Drink: </string>
     <string name="background_image_description" translatable="false">This is the background of the app</string>
 
-    <string name="menu_ramadan_breakfast">Ramadan Breakfast</string>
+    <string name="menu_ramadan_breakfast">Iftar</string>
     <string name="menu_sohor">Sohor</string>
     <string name="menu_dessert">Desserts</string>
 
 
-    <string name="main_meal_1">رقاق باللحمة المفرومة \n فراخ مشوية علي الفحم </string>
-    <string name="main_meal_2">محشي مشكل \n فرخة محمرة</string>
-    <string name="main_meal_3">صينية فراخ بالبطاطس في الفرن \n ارز بسمتي بالخلطه</string>
-    <string name="main_meal_4">مكرونة بالبشاميل\n بفتيك </string>
-    <string name="main_meal_5">مكرونة اسباجيتي \n كفتة مشوية </string>
-    <string name="main_meal_6">ملوخية \n أرز ابيض \n فراخ محمرة </string>
-    <string name="main_meal_7">شوربة عدس \n أرز ابيض </string>
-    <string name="main_meal_8">ارز كبسة بالفراخ \n شوربة كريمة الفراخ والمشروم</string>
+    <string name="main_meal_1">رقاق باللحمة المفرومة و فراخ مشوية علي الفحم </string>
+    <string name="main_meal_2">محشي مشكل و فرخة محمرة</string>
+    <string name="main_meal_3">صينية فراخ بالبطاطس في الفرن و ارز بسمتي بالخلطه</string>
+    <string name="main_meal_4">مكرونة بالبشاميل و بفتيك </string>
+    <string name="main_meal_5">مكرونة اسباجيتي و كفتة مشوية </string>
+    <string name="main_meal_6">ملوخية و أرز ابيض و فراخ محمرة </string>
+    <string name="main_meal_7">شوربة عدس و أرز ابيض </string>
+    <string name="main_meal_8">ارز كبسة بالفراخ و شوربة كريمة الفراخ والمشروم</string>
     <string name="main_meal_9">ارز معمر بالبط</string>
-    <string name="main_meal_10">مسقعة باللحمة المفرومة وبالشاميل \n خبز</string>
-    <string name="main_meal_11">فتة شاورما \n ثومية </string>
-    <string name="main_meal_12">طاجن خضار باللحم \n ارز بالشعرية</string>
-    <string name="main_meal_13">كوسة بشاميل \n ارز بالشعرية \n فراخ بانيه</string>
-    <string name="main_meal_14">طاجن حمام بالفريك دجاج\n محشي بالارز</string>
-    <string name="main_meal_15">سمك مقلي\n ارز احمر </string>
+    <string name="main_meal_10">مسقعة باللحمة المفرومة وبالشاميل و خبز</string>
+    <string name="main_meal_11">فتة شاورما و ثومية </string>
+    <string name="main_meal_12">طاجن خضار باللحم و ارز بالشعرية</string>
+    <string name="main_meal_13">كوسة بشاميل و ارز بالشعرية و فراخ بانيه</string>
+    <string name="main_meal_14">طاجن حمام بالفريك دجاج و محشي بالارز</string>
+    <string name="main_meal_15">سمك مقلي و ارز احمر </string>
     <string name="main_meal_16">دجاج محشي بالارز</string>
-    <string name="main_meal_17">شاورما فراخ\n عيش سوري \nثومية</string>
-    <string name="main_meal_18">مكرونة نجرسكو \nفراخ بانيه</string>
-    <string name="main_meal_19">دجاج تندوري \nارز بسمتي </string>
+    <string name="main_meal_17">شاورما فراخ\n عيش سوري و ثومية</string>
+    <string name="main_meal_18">مكرونة نجرسكو و فراخ بانيه</string>
+    <string name="main_meal_19">دجاج تندوري و ارز بسمتي </string>
     <string name="main_meal_20">كشري اصفر \nباذنجان مقلي </string>
     <string name="main_meal_21">كشري مصري \nدقة خل \n صوص طماطم </string>
     <string name="main_meal_22">مكرونة بالسجق </string>
@@ -219,7 +219,7 @@
     <string name="drink_20">جوافه</string>
 
     <string name="drink_21">قهوة تركى</string>
-    <string name="drink_22">شاء</string>
+    <string name="drink_22">شاى</string>
     <string name="drink_23">هوت سايدر</string>
     <string name="drink_24">نسكافية</string>
     <string name="drink_25">كابتشينو</string>
