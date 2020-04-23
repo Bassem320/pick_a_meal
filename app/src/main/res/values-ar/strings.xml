@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">نأكل أيه</string>
-    <string name="main_dish_text">الطبق الرئيسى</string>
-    <string name="side_dish_text">الطبق الجانبى</string>
-    <string name="entry_text">المقبلات</string>
-    <string name="dessert_text">الحلو</string>
-    <string name="drink_text">المشروب</string>
+    <string name="main_dish_text">"الطبق الرئيسى: "</string>
+    <string name="side_dish_text">"الطبق الجانبى: "</string>
+    <string name="entry_text">"المقبلات: "</string>
+    <string name="dessert_text">"الحلو: "</string>
+    <string name="drink_text">"المشروب: "</string>
+    <string-array name="meal_array">
+        <item>فطار رمضان</item>
+        <item>السحور</item>
+        <item>الحلو</item>
+    </string-array>
+    <string name="menu_ramadan_breakfast">فطار رمضان</string>
+    <string name="menu_sohor">السحور</string>
+    <string name="menu_dessert">الحلو</string>
 </resources>

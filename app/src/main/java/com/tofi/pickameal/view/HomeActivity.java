@@ -1,20 +1,28 @@
 package com.tofi.pickameal.view;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.tofi.pickameal.R;
+import com.tofi.pickameal.model.Dish;
 import com.tofi.pickameal.model.Meal;
 import com.tofi.pickameal.viewmodel.HomeViewModel;
 
 public class HomeActivity extends AppCompatActivity {
 
-    TextView txtMainDish, txtSideDish, txtEntry, txtDessert, txtDrinks;
+    TextView txtMainDish, txtSideDish, txtEntry, txtDessert, txtDrinks, txtMealType;
+    int mealIndex = Dish.RAMADAN_BREAKFAST;
 
     private HomeViewModel mViewModel;
     @Override
@@ -29,15 +37,42 @@ public class HomeActivity extends AppCompatActivity {
         txtEntry = findViewById(R.id.txt_entry);
         txtDessert = findViewById(R.id.txt_dessert);
         txtDrinks = findViewById(R.id.txt_drinks);
+        txtMealType = findViewById(R.id.txt_meal_type);
 
         FloatingActionButton btnQuickMeal = findViewById(R.id.btn_quick_meal);
         // Quick Meal Button Handler
         btnQuickMeal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mViewModel.getQuickMeal();
+                mViewModel.getQuickMeal(mealIndex);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.home_menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menu_ramadan_breakfast:
+                mealIndex = Dish.RAMADAN_BREAKFAST;
+                txtMealType.setText(R.string.menu_ramadan_breakfast);
+                return  true;
+            case R.id.menu_sohor:
+                mealIndex = Dish.SOHOR;
+                txtMealType.setText(R.string.menu_sohor);
+                return  true;
+            case R.id.menu_desserts:
+                mealIndex = Dish.DESSERTS;
+                txtMealType.setText(R.string.menu_dessert);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void setMeal(Meal meal){

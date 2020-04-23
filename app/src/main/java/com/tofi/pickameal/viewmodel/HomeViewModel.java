@@ -25,35 +25,55 @@ public class HomeViewModel extends ViewModel {
             mHomeActivity = homeActivity;
     }
 
-    public void getQuickMeal() {
+    public void getQuickMeal(int mealType) {
+
+        Meal quickMeal;
         // Still need to be handled
-        Meal quickMeal = generateMeal(Dish.ALL_YEAR_MEAL,Dish.RAMADAN_BREAKFAST,Dish.DEFAULT_PREFERENCES);
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
 
-        if((hour>0 && hour<5) || (hour >20)){
-            Log.i("PickAMeal","Sohor Time");
-        }else if(hour>5 && hour< 20){
-            Log.i("PickAMeal","Fetar Time");
-        }
+        quickMeal = generateMeal(Dish.SUMMER_MEAL,mealType,Dish.DEFAULT_PREFERENCES);
+
 
         mHomeActivity.setMeal(quickMeal);
     }
 
-    private Meal generateMeal(int dishSeason, int dishType,int userPreferences) {
-        ArrayList<Dish> mainDishList = getDishList(allMainDishList,dishSeason,dishType,userPreferences);
-        ArrayList<Dish> entryDishList = getDishList(allEntryDishList,dishSeason,dishType,userPreferences);
-        ArrayList<Dish> sideDishList = getDishList(allSideDishList,dishSeason,dishType,userPreferences);
-        ArrayList<Dish> dessertDishList = getDishList(allDesertDishList,dishSeason,dishType,userPreferences);
-        ArrayList<Dish> drinksDishList = getDishList(allDrinkDishList,dishSeason,dishType,userPreferences);
+    private Meal generateMeal(int mealSeason, int mealType,int userPreferences) {
 
-        return new Meal(mainDishList.get(0),
-                entryDishList.get(0),
-                sideDishList.get(0),
-                dessertDishList.get(0),
-                drinksDishList.get(0)
-        );
+        ArrayList<Dish> mainDishList = getDishList(allMainDishList,mealSeason,mealType,userPreferences);
+        ArrayList<Dish> entryDishList = getDishList(allEntryDishList,mealSeason,mealType,userPreferences);
+        ArrayList<Dish> sideDishList = getDishList(allSideDishList,mealSeason,mealType,userPreferences);
+        ArrayList<Dish> dessertDishList = getDishList(allDesertDishList,mealSeason,mealType,userPreferences);
+        ArrayList<Dish> drinksDishList = getDishList(allDrinkDishList,mealSeason,mealType,userPreferences);
+        Meal generatedMeal;
 
+        switch (mealType){
+
+            case Dish.SOHOR:
+                generatedMeal = new Meal(mainDishList.get(generateRandomNumber(mainDishList.size())),
+                        entryDishList.get(generateRandomNumber(entryDishList.size())),
+                        sideDishList.get(generateRandomNumber(sideDishList.size())),
+                        drinksDishList.get(generateRandomNumber(dessertDishList.size()))
+                );
+                break;
+            case Dish.DESSERTS:
+                generatedMeal = new Meal(dessertDishList.get(generateRandomNumber(dessertDishList.size())));
+                break;
+            default:
+                //Ramadan Breakfast is the default
+                generatedMeal =  new Meal(mainDishList.get(generateRandomNumber(mainDishList.size())),
+                        entryDishList.get(generateRandomNumber(entryDishList.size())),
+                        sideDishList.get(generateRandomNumber(sideDishList.size())),
+                        dessertDishList.get(generateRandomNumber(dessertDishList.size())),
+                        drinksDishList.get(generateRandomNumber(dessertDishList.size()))
+                );
+                break;        }
+        return generatedMeal;
+    }
+
+    private int generateRandomNumber(int maxNumber){
+        Random randomNumberGenerator = new Random();
+        return randomNumberGenerator.nextInt(maxNumber);
     }
 
     private ArrayList<Dish> getDishList(ArrayList<Dish> allMainDishList, int mealSeason, int mealType, int mealPreferences) {

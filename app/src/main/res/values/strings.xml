@@ -10,4 +10,13 @@
     <string name="entry_text">Entry: </string>
     <string name="dessert_text">Dessert: </string>
     <string name="drink_text">Drink: </string>
+    <string name="background_image_description" translatable="false">This is the background of the app</string>
+    <string name="menu_ramadan_breakfast">Ramadan Breakfast</string>
+    <string name="menu_sohor">Sohor</string>
+    <string name="menu_dessert">Desserts</string>
+    <string-array name="meal_array">
+        <item>Ramadan Breakfast</item>
+        <item>Sohor</item>
+        <item>Dessert</item>
+    </string-array>
 </resources>

@@ -40,6 +40,15 @@ public class Meal {
         this.hasDessert = false;
     }
 
+    public Meal(Dish mDessert) {
+        this.mDessert = mDessert;
+        this.hasDessert = true;
+
+        this.hasMain = false;
+        this.hasEntry = false;
+        this.hasSide = false;
+        this.hasDrinks = false;
+    }
 
     public Dish getEntry() {
         return mEntry;
