@@ -8,9 +8,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -61,14 +58,32 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.menu_ramadan_breakfast:
                 mealIndex = Dish.RAMADAN_BREAKFAST;
                 txtMealType.setText(R.string.menu_ramadan_breakfast);
+                txtMainDish.setVisibility(View.GONE);
+                txtEntry.setVisibility(View.GONE);
+                txtSideDish.setVisibility(View.GONE);
+                txtDessert.setVisibility(View.GONE);
+                txtDrinks.setVisibility(View.GONE);
+
                 return  true;
             case R.id.menu_sohor:
                 mealIndex = Dish.SOHOR;
                 txtMealType.setText(R.string.menu_sohor);
+                txtMainDish.setVisibility(View.GONE);
+                txtEntry.setVisibility(View.GONE);
+                txtSideDish.setVisibility(View.GONE);
+                txtDessert.setVisibility(View.GONE);
+                txtDrinks.setVisibility(View.GONE);
+
                 return  true;
             case R.id.menu_desserts:
                 mealIndex = Dish.DESSERTS;
                 txtMealType.setText(R.string.menu_dessert);
+                txtMainDish.setVisibility(View.GONE);
+                txtEntry.setVisibility(View.GONE);
+                txtSideDish.setVisibility(View.GONE);
+                txtDessert.setVisibility(View.GONE);
+                txtDrinks.setVisibility(View.GONE);
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -77,27 +92,32 @@ public class HomeActivity extends AppCompatActivity {
 
     public void setMeal(Meal meal){
         if(meal.isHasMain()){
-            txtMainDish.setText(meal.getMainDish().getName());
+            txtMainDish.setText(meal.getMainDish().getDishNameId());
+            txtMainDish.setVisibility(View.VISIBLE);
         }else{
             txtMainDish.setVisibility(View.GONE);
         }
         if(meal.isHasSide()){
-            txtSideDish.setText(meal.getSideDish().getName());
+            txtSideDish.setText(meal.getSideDish().getDishNameId());
+            txtSideDish.setVisibility(View.VISIBLE);
         }else{
             txtSideDish.setVisibility(View.GONE);
         }
         if(meal.isHasEntry()){
-            txtEntry.setText(meal.getEntry().getName());
+            txtEntry.setText(meal.getEntry().getDishNameId());
+            txtEntry.setVisibility(View.VISIBLE);
         }else{
             txtEntry.setVisibility(View.GONE);
         }
         if(meal.isHasDessert()){
-            txtDessert.setText(meal.getDessert().getName());
+            txtDessert.setText(meal.getDessert().getDishNameId());
+            txtDessert.setVisibility(View.VISIBLE);
         }else{
             txtDessert.setVisibility(View.GONE);
         }
         if(meal.isHasDrinks()){
-            txtDrinks.setText(meal.getDrinks().getName());
+            txtDrinks.setText(meal.getDrinks().getDishNameId());
+            txtDrinks.setVisibility(View.VISIBLE);
         }else{
             txtDrinks.setVisibility(View.GONE);
         }

@@ -20,47 +20,47 @@ public class Dish {
     public static final int CHRISTIAN_MEAL = 7654;
     public static final int DEFAULT_PREFERENCES = 6543;
 
-    private String mName;
-    private String mDishType;
-    private String mDishSeason;
-    private String mUserPreferences;
+    private int mDishNameId;
+    private int mDishType;
+    private int mDishSeason;
+    private int mUserPreferences;
 
-    public Dish(String mName, String mDishType, String mDishSeason, String mUserPreferences) {
-        this.mName = mName;
-        this.mDishType = mDishType;
-        this.mDishSeason = mDishSeason;
-        this.mUserPreferences = mUserPreferences;
+    public Dish(int dishNameId, int dishSeason, int dishType, int userPreferences) {
+        this.mDishNameId = dishNameId;
+        this.mDishType = dishType;
+        this.mDishSeason = dishSeason;
+        this.mUserPreferences = userPreferences;
     }
 
-    public String getName() {
-        return mName;
+    public int getDishNameId() {
+        return mDishNameId;
     }
 
-    public void setName(String mName) {
-        this.mName = mName;
+    public void setDishNameId(int mDishNameId) {
+        this.mDishNameId = mDishNameId;
     }
 
-    public String getDishType() {
+    public int getDishType() {
         return mDishType;
     }
 
-    public void setDishType(String mDishType) {
+    public void setDishType(int mDishType) {
         this.mDishType = mDishType;
     }
 
-    public String getDishSeason() {
+    public int getDishSeason() {
         return mDishSeason;
     }
 
-    public void setDishSeason(String mDishSeason) {
+    public void setDishSeason(int mDishSeason) {
         this.mDishSeason = mDishSeason;
     }
 
-    public String getUserPreferences() {
+    public int getUserPreferences() {
         return mUserPreferences;
     }
 
-    public void setUserPreferences(String mUserPreferences) {
+    public void setUserPreferences(int mUserPreferences) {
         this.mUserPreferences = mUserPreferences;
     }
 }

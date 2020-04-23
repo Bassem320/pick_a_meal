@@ -15,7 +15,7 @@ public class Meal {
     private Dish mDrinks;
     private boolean hasDrinks;
 
-    public Meal(Dish mEntry, Dish mMainDish, Dish mSideDish, Dish mDessert, Dish mDrinks) {
+    public Meal(Dish mMainDish, Dish mEntry, Dish mSideDish, Dish mDessert, Dish mDrinks) {
         this.mEntry = mEntry;
         this.hasEntry = true;
         this.mMainDish = mMainDish;
@@ -28,7 +28,7 @@ public class Meal {
         this.hasDrinks = true;
     }
 
-    public Meal(Dish mEntry, Dish mMainDish, Dish mSideDish, Dish mDrinks) {
+    public Meal(Dish mMainDish, Dish mEntry, Dish mSideDish, Dish mDrinks) {
         this.mEntry = mEntry;
         this.hasEntry = true;
         this.mMainDish = mMainDish;
