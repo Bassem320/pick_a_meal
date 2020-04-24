@@ -225,6 +225,11 @@
     <string name="drink_25">كابتشينو</string>
     <string name="drink_26">قهوة فرنساوى</string>
     <string name="drink_27">هوت شوكليت</string>
+    <string name="img_main_description" translatable="false">this is the main dish image</string>
+    <string name="img_side_description" translatable="false">this is the side dish image</string>
+    <string name="img_entry_description" translatable="false">this is the entry image</string>
+    <string name="img_dessert_decription" translatable="false">this is the dessert image</string>
+    <string name="img_drinks_description" translatable="false">this is the drinks image</string>
 
 
 </resources>
